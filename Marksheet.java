@@ -32,7 +32,7 @@ public void FindtotalMarks() {
 	
 }
 public void FindPercentage() {
-	percentage= (totalmarks/500)*100;
+	this.percentage=(this.totalmarks*100)/500;
 	System.out.println("percentage="+this.percentage);
 }
 public int getTotalmarks() {
