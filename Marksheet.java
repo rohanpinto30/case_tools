@@ -3,6 +3,7 @@ public class Marksheet {
 	private int totalmarks;
 	private int marks1, marks2,marks3,marks4,marks5;
 	private int percentage;
+	private char grade;
 	private Scanner  sc;
 public Marksheet() {
 	totalmarks=0;
@@ -56,33 +57,40 @@ public int getMarks5() {
 public int getPercentage() {
 	return percentage;
 }
-public void FindGrade() {
+public char FindGrade() {
 	if(this.percentage>80&&this.percentage<=100)
 	{
-		System.out.println("Grade A");
+		grade='A';
+	
 	}
 	else if(this.percentage>60&&this.percentage<=80)
 	{
-		System.out.println("Grade B");
+	grade='B';
 		
 	}
 	else if(this.percentage>50&&this.percentage<=60)
 	{
-		System.out.println("Grade C");
-		
+	
+		grade='C';
 	}
 	else if(this.percentage>40&&this.percentage<=50)
 	{
-		System.out.println("Grade D");
+	   grade='D';
 		
 	}
-	else {
-		System.out.println("Fail");
+else {
+	grade='F';
+		
 		
 	}
-	
+	return grade;
 	
 }
+
+
+
+}
+
 
 
 
